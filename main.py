@@ -11,7 +11,7 @@ for eos_name in eos_names:
     for mass_ratio in mass_ratios:
         for SNR in SNRs:
             for encoding_method in encoding_methods:
-                label = eos_name + '_massratio' + str(mass_ratio * 100) + '_SNR' + str(SNR) + '_' + encoding_method
+                label = eos_name + '_massratio' + str(int(mass_ratio * 100)) + '_SNR' + str(SNR) + '_' + encoding_method
                 eos = EOS(eos_name=eos_name, m1=1, q=mass_ratio, SNR=SNR, encoding_method=encoding_method)
                 ini_generator = INIGenerator(injectiondict=eos.injection_dict(), priordict=eos.prior_dict(),
                                              label=label)
