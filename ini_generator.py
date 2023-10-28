@@ -19,11 +19,11 @@ class INIGenerator:
 
     def _change_label(self, label):
         label_index = self._find_index('label')
-        self.lines[label_index] = label
+        self.lines[label_index] = 'label=' + label
 
     def _change_outdir(self, outdir):
         outdir_index = self._find_index('outdir')
-        self.lines[outdir_index] = outdir
+        self.lines[outdir_index] = 'outdir=' + outdir + '_outdir'
 
     def _change_injection_dict(self, injectiondict):
         injectiondict_index = self._find_index('injection-dict')
