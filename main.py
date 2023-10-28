@@ -7,7 +7,7 @@ mass_ratios = [1, 0.85, 0.65, 0.5]
 SNRs = [15, 30]
 encoding_methods = ['l1l2', 'binary_love', 'common_radius']
 
-bash_script = open('launch_ini_files.sh', 'w')
+bash_script = open('ini_files_to_recreate_plots/launch_ini_files.sh', 'w')
 
 for eos_name in eos_names:
     for mass_ratio in mass_ratios:

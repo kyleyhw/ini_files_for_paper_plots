@@ -39,7 +39,7 @@ class INIGenerator:
         self._change_injection_dict(self.injectiondict)
         self._change_prior_dict(self.priordict)
         if save:
-            file = open(str('ini_files/' + self.label + '.ini'), 'w')
+            file = open(str('ini_files_to_recreate_plots/' + self.label + '.ini'), 'w')
             for line in self.lines:
                 file.write(line + '\n')
             file.close()
