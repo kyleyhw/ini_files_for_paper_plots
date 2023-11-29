@@ -7,13 +7,13 @@ class INIGenerator:
         self.priordict = priordict
         self.label = label
 
-        filename = 'template.ini'
+        filename = 'accounted_template.ini'
 
         with open(filename) as f:
             self.lines = f.read().split('\n')
 
     def _find_index(self, parameter):
-        string = str(parameter + '=')
+        string = str(parameter) + '='
         index = np.nonzero([line[:len(string)] == string for line in self.lines])[0][0]
         return index
 
@@ -33,7 +33,7 @@ class INIGenerator:
         priordict_index = self._find_index('prior-dict')
         self.lines[priordict_index] = priordict
 
-    def write_injection_dict(self, save=False):
+    def write_changes(self, save=False):
         self._change_label(self.label)
         self._change_outdir(self.label)
         self._change_injection_dict(self.injectiondict)

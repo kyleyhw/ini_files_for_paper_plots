@@ -49,7 +49,7 @@ class EOS:
               '  "chi_1": 0.0, \n'
               '  "chi_2": 0.0,  \n'
               '  "lambda_1": ' + str(self._call(self.m1)) + ', \n' +
-              '  "lambda_2": ' + str(self._call(self.m2)) + ', \n' +
+              '  "lambda_2": ' + str(self._call(self.m2)) + '\n' +
               '}')
 
     def prior_dict(self):
@@ -61,8 +61,8 @@ class EOS:
                             '  delta_lambda = Uniform(name="delta_lambda", minimum=-500, maximum=1000), \n'
                             '  lambda_1 = Constraint(name="lambda_1", minimum=0, maximum=10000), \n'
                             '  lambda_2 = Constraint(name="lambda_2", minimum=0, maximum=10000), \n'
-                            '  chi_1 = 0.02, \n'
-                            '  chi_2 = 0.02, \n'
+                            '  chi_1 = 0, \n'
+                            '  chi_2 = 0, \n'
                             '  luminosity_distance = bilby.gw.prior.UniformSourceFrame(name="luminosity_distance", minimum=1e2, maximum=8e3, unit="Mpc"), \n'
                             '  dec = -1.2108, \n'
                             '  ra = 1.375, \n'

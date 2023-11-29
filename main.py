@@ -9,6 +9,8 @@ encoding_methods = ['l1l2', 'binary_love', 'common_radius']
 
 bash_script = open('ini_files_to_recreate_plots/launch_ini_files.sh', 'w')
 
+bash_script.write('# to make script an executable: run \'chmod +x launch_ini_files.sh\', then execute using \'bash launch_ini_files.sh\' \n')
+
 for eos_name in eos_names:
     for mass_ratio in mass_ratios:
         for SNR in SNRs:
@@ -17,7 +19,7 @@ for eos_name in eos_names:
                 eos = EOS(eos_name=eos_name, q=mass_ratio, SNR=SNR, encoding_method=encoding_method)
                 ini_generator = INIGenerator(injectiondict=eos.injection_dict(), priordict=eos.prior_dict(),
                                              label=label)
-                ini_generator.write_injection_dict(save=True)
+                ini_generator.write_changes(save=True)
 
                 bash_script.write('bilby_pipe /home/kyle.wong/ini_files_to_recreate_plots/' + label + '.ini --submit' + '\n')
 
