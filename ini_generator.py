@@ -7,7 +7,7 @@ class INIGenerator:
         self.priordict = priordict
         self.label = label
 
-        filename = 'accounted_template.ini'
+        filename = 'phil_roq_template.ini'
 
         with open(filename) as f:
             self.lines = f.read().split('\n')

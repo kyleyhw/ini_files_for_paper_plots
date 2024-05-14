@@ -1,4 +1,4 @@
-# to make script an executable: run 'chmod +x launch_ini_files.sh', then execute using 'bash script.sh' 
+# to make script an executable: run 'chmod +x launch_ini_files.sh', then execute using 'bash launch_ini_files.sh' 
 bilby_pipe /home/kyle.wong/ini_files_to_recreate_plots/H4_massratio100_SNR15_l1l2.ini --submit
 bilby_pipe /home/kyle.wong/ini_files_to_recreate_plots/H4_massratio100_SNR15_binary_love.ini --submit
 bilby_pipe /home/kyle.wong/ini_files_to_recreate_plots/H4_massratio100_SNR15_common_radius.ini --submit
